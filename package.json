@@ -6,9 +6,7 @@
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
-      "!src/setupTests.js",
-      "!src/reportWebVitals.js",
-      "!src/App.js"
+      "!src/setupTests.js"
     ]
   },
   "dependencies": {
