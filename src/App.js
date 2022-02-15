@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "./components/Button/Button";
 import List from "./components/List/List";
 import { loadTasksThunk } from "./redux/thunks/taskThunks";
-import { deleteTaskThunk } from "./redux/thunks/taskThunks";
 
 function App() {
   const taskList = useSelector((state) => state.taskList);
