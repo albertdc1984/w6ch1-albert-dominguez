@@ -9,3 +9,8 @@ export const deleteTask = (id) => ({
   type: actionTypes.deleteTask,
   id,
 });
+
+export const addTask = (task) => ({
+  type: actionTypes.addTask,
+  task,
+});
