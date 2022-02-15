@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Button } from "./components/Button/Button";
 import List from "./components/List/List";
 import { loadTasksThunk } from "./redux/thunks/taskThunks";
 
@@ -14,9 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1>TO DO LIST</h1>
-      <Button text="REMOVE SELECTED" />
       <List apiList={taskList} />
-      <Button text="MODIFY/UPDATE TASK" />
     </div>
   );
 }
