@@ -7,9 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(29, 0, 56);
   color: white;
+  display: flex;
+  justify-content: center;
 }
 ul {
+  display: flex;
+  flex-direction: column;
   list-style: none;
+  padding: 0;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
