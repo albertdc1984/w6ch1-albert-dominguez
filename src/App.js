@@ -1,18 +1,23 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Button } from "./components/Button/Button";
 import List from "./components/List/List";
+import { loadTasksThunk } from "./redux/thunks/taskThunks";
+import { deleteTaskThunk } from "./redux/thunks/taskThunks";
 
 function App() {
-  const fakeApiList = [
-    { todo: "Fregar platos", id: 1 },
-    { todo: "Cambiar la arena de los gatos", id: 2 },
-    { todo: "Comprar comida para gatos", id: 3 },
-    { todo: "Poner una lavadora", id: 4 },
-    { todo: "Tender la ropa", id: 5 },
-    { todo: "Fregar el suelo", id: 6 },
-  ];
+  const taskList = useSelector((state) => state.taskList);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(loadTasksThunk);
+  }, [dispatch]);
 
   return (
     <div className="App">
-      <List apiList={fakeApiList} />
+      <h1>TO DO LIST</h1>
+      <Button text="REMOVE SELECTED" />
+      <List apiList={taskList} />
+      <Button text="MODIFY/UPDATE TASK" />
     </div>
   );
 }

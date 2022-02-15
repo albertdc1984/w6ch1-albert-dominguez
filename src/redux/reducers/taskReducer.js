@@ -1,6 +1,6 @@
-import actionTypes from "../actions/actionTypes";
+import { actionTypes } from "../actions/actionTypes";
 
-const tasksReducer = (tasks = [], action = {}) => {
+export const taskReducer = (tasks = [], action = {}) => {
   let newTasks;
 
   switch (action.type) {
@@ -18,4 +18,3 @@ const tasksReducer = (tasks = [], action = {}) => {
 
   return newTasks;
 };
-export default tasksReducer;
