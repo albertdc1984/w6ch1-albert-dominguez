@@ -1,5 +1,7 @@
 import List from "./List";
 import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
+import { store } from "../../redux/store";
 
 describe("Given a List component", () => {
   describe("When it receives an array of todos", () => {
@@ -12,7 +14,11 @@ describe("Given a List component", () => {
       { todo: "Fregar el suelo", id: 6 },
     ];
     test("Then it should render a list", () => {
-      render(<List apiList={fakeList} />);
+      render(
+        <Provider store={store}>
+          <List apiList={fakeList} />
+        </Provider>
+      );
 
       const list = screen.getAllByRole("list");
 
