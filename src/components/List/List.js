@@ -1,9 +1,13 @@
-const List = ({ apiList }) => {
-  debugger;
+const List = ({ apiList }, { deleteTaskOnClick }) => {
   return (
     <ul>
       {apiList.map((lItem) => {
-        return <li key={lItem.id}>{lItem.todo}</li>;
+        return (
+          <li key={lItem.id}>
+            {lItem.todo}
+            <input type="checkbox"></input>
+          </li>
+        );
       })}
     </ul>
   );
