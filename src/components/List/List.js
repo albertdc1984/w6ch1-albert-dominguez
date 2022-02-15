@@ -9,7 +9,7 @@ const List = ({ apiList }) => {
       {apiList.map((lItem) => {
         return (
           <li key={lItem.id}>
-            {lItem.todo}
+            {lItem.name}
             <Button
               actionOnClick={() => dispatch(deleteTaskThunk(lItem.id))}
               text="REMOVE"
