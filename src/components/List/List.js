@@ -9,7 +9,8 @@ const List = ({ apiList }) => {
       {apiList.map((lItem) => {
         return (
           <li key={lItem.id}>
-            {lItem.name}
+            <input type={"checkbox"} id={`task${lItem.id}`} />
+            <label for={`task${lItem.id}`}> {lItem.name}</label>
             <Button
               actionOnClick={() => dispatch(deleteTaskThunk(lItem.id))}
               text="REMOVE"
