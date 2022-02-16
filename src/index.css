@@ -5,16 +5,39 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(29, 0, 56);
+  background-color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(255, 0, 0), 0 0 0.2em red;
   color: white;
   display: flex;
   justify-content: center;
 }
+button {
+  all: unset;
+}
+#name {
+  border-radius: 40px;
+  margin-top: 40px;
+  outline: none;
+  box-shadow: none;
+  border-color: rgb(255, 114, 114);
+  border-width: 4px;
+}
+.App {
+  width: 50%;
+}
+
 ul {
+  width: 40vw;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
